@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.tit {
+ border-radius: 15px 15px 0 0;
+}
+
+.cardi {
+    border-radius: 15px;
+    width: 46%;
+}
+
+.mat-slide-toggle-checked .mat-slide-toggle-bar {
+    background-color: green;
+  }
+  
+  .mat-slide-toggle-checked .mat-slide-toggle-thumb {
+    color: white;
+  }

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importa los archivos CSS de Bootstrap */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Importa los archivos CSS de Bootstrap Icons */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.entrsal {
+    min-height: 8rem;
+    height: auto;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

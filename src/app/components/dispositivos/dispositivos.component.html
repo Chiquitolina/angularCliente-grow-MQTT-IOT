@@ -1,0 +1,42 @@
+<div [@enterStateTwo] class="d-flex flex-column text-center justify-content-center">
+    <h1>Dispositivos</h1>
+<form class="d-flex w-100 justify-content-center" role="search">
+    <input class="form-control me-2 w-25" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success p-1" type="submit" disabled><i class="bi bi-search"></i></button>
+</form>
+</div>
+<div class="d-flex flex-wrap justify-content-around">
+    <div [@enterState] class=" text-center mt-2 cardi" *ngFor="let dispositivo of dispositivosFiltrados"
+        [ngStyle]="{'background-color': dispositivo.estado === 0 ? 'rgba(255, 66, 66, 0.8)' : 'rgba(71, 123, 65, 0.8)'}">
+        <mat-slide-toggle ></mat-slide-toggle>
+        <div class="bg-dark text-white tit p-2">
+            <h5>{{dispositivo.titulo}}</h5>
+        </div>
+        
+        <div class="d-flex flex-wrap justify-content-around border">
+            <div>
+                <h6>ID Usuario:</h6>
+                <p>{{dispositivo.id_usuario}}</p>
+            </div>
+            <div>
+                <h6>ID Serie:</h6>
+                <p>{{dispositivo.id_serie}}</p>
+            </div>
+            <div>
+                <h6>ID Dispositivo:</h6>
+                <p>{{dispositivo.id_dispositivo}}</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around border">
+            <div>
+                <h6>Entradas:</h6>
+                <p>{{dispositivo.entradas.length}}</p>
+            </div>
+            <div>
+                <h6>Salidas:</h6>
+                <p>{{dispositivo.salidas.length}}</p>
+            </div>
+        </div>
+        <button routerLink="/dispositivo" (click)="seleccionarDispositivo(dispositivo)" class="btn btn-dark m-2 p-2">Detalles</button>
+    </div>
+</div>
